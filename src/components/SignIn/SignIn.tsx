@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./signIn.css";
 import { Link, useNavigate } from "react-router-dom";
+import AntIcon from "../../assets/Subtract.svg";
 
 const SignIn = () => {
   const [authType, setAuthType] = useState<"saas" | "self-hosted">("saas");
@@ -13,7 +14,39 @@ const SignIn = () => {
 
   return (
     <div className="signin-container">
-      <div className="signin-left">left</div>
+      <div className="signin-left">
+        <div className="card-layout">
+          <div className="card card-primary">
+            <AntIcon />
+            <h3>AI to Detect & Autofix Bad Code</h3>
+            <div className="line"></div>
+            <div className="stats">
+              <div>
+                30+
+                <br />
+                Language Support
+              </div>
+              <div>
+                10K+
+                <br />
+                Developers
+              </div>
+              <div>
+                100K+
+                <br />
+                Hours Saved
+              </div>
+            </div>
+          </div>
+          <div className="card card-secondary">
+            <h3>Issues Fixed</h3>
+            <h1>500K+</h1>
+            <p>
+              <span className="increase">↑ 14%</span> This week
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="signin-right">
         <div className="auth-container">
           <div className="auth-heading">
