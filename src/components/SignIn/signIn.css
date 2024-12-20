@@ -311,8 +311,8 @@
   align-items: center;
   gap: 16px;
   flex: 1 0 0;
-  /* width: 672px;
-  height: 326.34px; */
+  /* width: 672px; */
+  height: 326.34px;
 }
 
 .auth-button {

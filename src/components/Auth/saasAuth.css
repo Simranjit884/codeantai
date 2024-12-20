@@ -1,0 +1,10 @@
+.auth-buttons {
+  display: flex;
+  padding: 24px 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  flex: 1 0 0;
+  height: 285px;
+}

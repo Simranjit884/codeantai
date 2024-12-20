@@ -1,19 +1,15 @@
 import { useState } from "react";
 import "./signIn.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CodeAntLargeIcon from "../icons/CodeAntLargeIcon";
 import IncreaseArrowIcon from "../icons/IncreaseArrowIcon";
 import CodeAntSmallIcon from "../icons/CodeAntSmallIcon";
 import CodeAntLogo from "../icons/CodeAntLogo";
+import SaasAuth from "../Auth/SaasAuth";
+import SelfHostedAuth from "../Auth/SelfHostedAuth";
 
 const SignIn = () => {
   const [authType, setAuthType] = useState<"saas" | "self-hosted">("saas");
-  const navigate = useNavigate();
-
-  const handleAuth = (provider: string) => {
-    console.log(provider);
-    navigate("/repositories");
-  };
 
   return (
     <div className="signin-container">
@@ -99,36 +95,8 @@ const SignIn = () => {
               </button>
             </div>
           </div>
-          <div className="auth-buttons">
-            <button
-              className="auth-button github"
-              onClick={() => handleAuth("github")}
-            >
-              <img src="src\assets\githubIcon.svg" alt="GitHub" />
-              <span>Sign in with Github</span>
-            </button>
-            <button
-              className="auth-button bitbucket"
-              onClick={() => handleAuth("bitbucket")}
-            >
-              <img src="src\assets\bitbucketIcon.svg" alt="Bitbucket" />
-              <span>Sign in with Bitbucket</span>
-            </button>
-            <button
-              className="auth-button azure"
-              onClick={() => handleAuth("azure")}
-            >
-              <img src="src\assets\azureIcon.svg" alt="Azure DevOps" />
-              <span>Sign in with Azure Devops</span>
-            </button>
-            <button
-              className="auth-button gitlab"
-              onClick={() => handleAuth("gitlab")}
-            >
-              <img src="src\assets\gitlabIcon.svg" alt="GitLab" />
-              <span>Sign in with GitLab</span>
-            </button>
-          </div>
+          {authType === "saas" && <SaasAuth />}
+          {authType === "self-hosted" && <SelfHostedAuth />}
         </div>
         <p className="privacy-notice">
           By signing up you agree to the{" "}
