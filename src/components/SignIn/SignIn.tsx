@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./signIn.css";
 import { Link, useNavigate } from "react-router-dom";
-import AntIcon from "../../assets/Subtract.svg";
+import CodeAntLargeIcon from "../icons/CodeAntLargeIcon";
+import IncreaseArrowIcon from "../icons/IncreaseArrowIcon";
+import CodeAntSmallIcon from "../icons/CodeAntSmallIcon";
+import CodeAntLogo from "../icons/CodeAntLogo";
 
 const SignIn = () => {
   const [authType, setAuthType] = useState<"saas" | "self-hosted">("saas");
@@ -17,34 +20,48 @@ const SignIn = () => {
       <div className="signin-left">
         <div className="card-layout">
           <div className="card card-primary">
-            <AntIcon />
-            <h3>AI to Detect & Autofix Bad Code</h3>
+            <div className="card-heading">
+              <CodeAntSmallIcon />
+              <h3>AI to Detect & Autofix Bad Code</h3>
+            </div>
             <div className="line"></div>
             <div className="stats">
               <div>
-                30+
-                <br />
-                Language Support
+                <span>30+</span>
+                <span>Language Support</span>
               </div>
               <div>
-                10K+
-                <br />
-                Developers
+                <span>10K+</span>
+                <span>Developers</span>
               </div>
               <div>
-                100K+
-                <br />
-                Hours Saved
+                <span>100K+</span>
+                <span>Hours Saved</span>
               </div>
             </div>
           </div>
           <div className="card card-secondary">
-            <h3>Issues Fixed</h3>
-            <h1>500K+</h1>
-            <p>
-              <span className="increase">↑ 14%</span> This week
-            </p>
+            <div>
+              <div className="pie-chart-icon">
+                <img src="src\assets\ellipse_1.svg" alt="elliplse" />
+                <img src="src\assets\pie-chart.svg" alt="pie-chart" />
+              </div>
+              <div>
+                <span className="increase">
+                  <IncreaseArrowIcon />
+                  <span>14%</span>
+                </span>
+                <span>This week</span>
+              </div>
+            </div>
+            <div>
+              <h3>Issues Fixed</h3>
+              <h1>500K+</h1>
+            </div>
           </div>
+        </div>
+        <div className="transparent-logo">
+          <CodeAntLargeIcon />
         </div>
       </div>
       <div className="signin-right">
@@ -52,7 +69,7 @@ const SignIn = () => {
           <div className="auth-heading">
             <div className="logo-heading">
               <div className="logo">
-                <img src="src\assets\codeAntlogo.svg" alt="CodeAnt AI" />
+                <CodeAntLogo />
                 <h1>CodeAnt AI</h1>
               </div>
               <h2>Welcome to CodeAnt AI</h2>
