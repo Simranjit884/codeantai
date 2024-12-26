@@ -17,6 +17,8 @@
   --Line-height-display-xs: 32px;
 
   /* Colors */
+  --Primary-white: #fff;
+
   --Colors-Effects-Shadows-shadow-xs: rgba(10, 13, 18, 0.05);
   --Colors-Effects-Shadows-shadow-skeumorphic-inner-border: rgba(
     10,

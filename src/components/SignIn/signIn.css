@@ -2,7 +2,6 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 960px;
   background-color: "#FAFAFA";
 }
 
@@ -18,13 +17,12 @@
 .card-layout {
   position: relative;
   width: 469px;
-  /* max-width: 470px; */
   margin: 0 auto;
 }
 
 .card {
   border-radius: 24px;
-  background: var(--Primary-white, #fff);
+  background: var(--Primary-white);
   box-shadow: 0px 0px 24px 0px rgba(8, 23, 53, 0.16);
 }
 
@@ -101,9 +99,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: 27px; /* 150% */
-}
-
-.card-secondary {
 }
 
 .card-secondary div:first-child {
@@ -210,9 +205,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100%; */
   padding: 24px;
-  /* flex: 1 0 0; */
   background: #fafafa;
 }
 
@@ -231,8 +224,6 @@
   justify-content: center;
   gap: 20px;
   border-bottom: 1px solid #d5d7da;
-  /* width: 672px;
-  height: 276px;  */
 }
 
 .auth-heading h2 {
@@ -278,7 +269,7 @@
   align-items: center;
   gap: var(--spacing-xs, 4px);
   flex: 1 0 0;
-  border-radius: var(--radius-md, 8px);
+  border-radius: var(--radius-md);
   border: 1px solid #e9eaeb;
   background: #fafafa;
   width: 311px;
@@ -311,7 +302,6 @@
   align-items: center;
   gap: 16px;
   flex: 1 0 0;
-  /* width: 672px; */
   height: 326.34px;
 }
 
