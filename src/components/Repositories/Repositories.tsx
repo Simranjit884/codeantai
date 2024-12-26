@@ -13,6 +13,9 @@ import PlusIcon from "../icons/PlusIcon";
 import SearchIcon from "../icons/SearchIcon";
 import EcllipseSmallIcon from "../icons/EcllipseSmallIcon";
 import DatabaseIcon from "../icons/DatabaseIcon";
+import MobileNavigationIcon from "../icons/MobileNavigationIcon";
+import HomeIconBlack from "../icons/HomeIconBlack";
+import CrossIcon from "../icons/CrossIcon";
 
 interface Repository {
   name: string;
@@ -25,6 +28,7 @@ interface Repository {
 const Repositories = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedOption, setSelectedOption] = useState("simranjitsingh");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const repositories: Repository[] = [
     {
@@ -80,6 +84,109 @@ const Repositories = () => {
 
   return (
     <div className="repo-container">
+      {/*Mobile navigation */}
+      <div className="mobile-header">
+        <div className="mobile-header-content">
+          <div className="mobile-logo">
+            <CodeAntSmallIcon />
+            <span>CodeAnt AI</span>
+          </div>
+          <button
+            className="mobile-menu-button"
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <MobileNavigationIcon />
+          </button>
+        </div>
+      </div>
+
+      <div className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
+        <div className="mobile-menu-header">
+          <div className="mobile-logo">
+            <CodeAntSmallIcon />
+            <span>CodeAnt AI</span>
+          </div>
+          <button
+            className="close-menu-button"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <CrossIcon />
+          </button>
+        </div>
+        <div className="mobile-menu-content">
+          <select
+            value={selectedOption}
+            onChange={(e) => setSelectedOption(e.target.value)}
+          >
+            <option value="simranjitsingh">simranjitsingh</option>
+            {/* Add more options here if needed */}
+          </select>
+          {/* */}
+          {/* <nav className="mobile-nav">
+            <a href="#" className="menu-item active">
+              <img src="/placeholder.svg?height=20&width=20" alt="" />
+              Repositories
+            </a>
+            <a href="#" className="menu-item">
+              <img src="/placeholder.svg?height=20&width=20" alt="" />
+              AI Code Review
+            </a>
+            <a href="#" className="menu-item">
+              <img src="/placeholder.svg?height=20&width=20" alt="" />
+              Cloud Security
+            </a>
+            <a href="#" className="menu-item">
+              <img src="/placeholder.svg?height=20&width=20" alt="" />
+              How to Use
+            </a>
+            <a href="#" className="menu-item">
+              <img src="/placeholder.svg?height=20&width=20" alt="" />
+              Settings
+            </a>
+            <a href="#" className="menu-item">
+              <img src="/placeholder.svg?height=20&width=20" alt="" />
+              Support
+            </a>
+            <a href="#" className="menu-item">
+              <img src="/placeholder.svg?height=20&width=20" alt="" />
+              Logout
+            </a>
+          </nav> */}
+
+          <nav className="mobile-nav">
+            <a href="#" className="menu-item">
+              <HomeIconBlack />
+              <span>Repositories</span>
+            </a>
+            <a href="#" className="menu-item">
+              <CodeIcon />
+              <span>AI Code Review</span>
+            </a>
+            <a href="#" className="menu-item">
+              <CloudIcon />
+              <span>Cloud Security</span>
+            </a>
+            <a href="#" className="menu-item">
+              <BookIcon />
+              <span>How to Use</span>
+            </a>
+            <a href="#" className="menu-item">
+              <SettingsIcon />
+              <span>Settings</span>
+            </a>
+            <a href="#" className="sidebar-footer-item">
+              <PhoneIcon />
+              <span>Support</span>
+            </a>
+            <a href="#" className="sidebar-footer-item">
+              <LogoutIcon />
+              <span>Logout</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      {/* Desktop */}
       <nav className="sidebar">
         <div className="sidebar-header">
           <div className="sidebar-title">
@@ -94,6 +201,7 @@ const Repositories = () => {
             {/* Add more options here if needed */}
           </select>
         </div>
+
         <div className="sidebar-menu">
           <a href="#" className="menu-item active">
             <HomeIcon />
@@ -156,7 +264,11 @@ const Repositories = () => {
             </div>
           </header>
           <div className="repository-divider" />
-          <div className="repository-list">
+          <div
+            className={`repository-list ${
+              isMobileMenuOpen ? "dimmed-background" : ""
+            }`}
+          >
             {repositories.map((repo) => (
               <div key={repo.name} className="repository-item">
                 <div className="repo-info">
