@@ -131,7 +131,7 @@ select {
   background: #fff;
 
   /* Add custom arrow */
-  background-image: url("src/assets/chevron-down.svg");
+  background-image: url("/assets/chevron-down.svg");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 12px;
