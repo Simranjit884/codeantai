@@ -14,6 +14,53 @@ Desktop version-
 ![image](https://github.com/user-attachments/assets/9ba6d4f4-138e-4b9c-b65a-25164195ecd4)
 ![image](https://github.com/user-attachments/assets/9f03094f-acde-4710-a593-8f073b54168d)
 
+## Project Structure
 
+```
+codeant-ai/
+├── src/
+│   ├── components/
+│   │   ├── Auth/
+│   │   │   ├── SaasAuth.tsx
+│   │   │   ├── SelfHostedAuth.tsx
+│   │   ├── Repositories/
+│   │   │   ├── Repositories.tsx
+│   │   │   ├── MenuItems.tsx
+│   │   │   ├── FooterItems.tsx
+│   │   ├── SignIn/
+│   │   │   ├── SignIn.tsx
+│   │   ├── UI/
+│   │   │   ├── Button.tsx
+│   │   ├── icons/
+│   ├── data/
+│   │   ├── repositoryData.ts
+│   │   ├── authProviders.ts
+│   │   ├── selfhostedAuthProviders.ts
+│   ├── hooks/
+│   │   ├── useRepositories.ts
+│   ├── types/
+│   │   ├── types.ts
+│   ├── App.tsx
+│   ├── main.tsx
+├── public/
+│   ├── icons/
+│   └── output/
+├── config/
+│   ├── components.json
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── package.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── index.html
+├── .gitignore
+```
+## Tech Stack
 
-
+- **Frontend Framework**: Reactjs 18
+- **Routing**: React Router DOM
+- **Styling**: 
+  - vanila CSS
+- **Build Tool**: Vite
