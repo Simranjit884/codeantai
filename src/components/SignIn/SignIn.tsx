@@ -39,8 +39,8 @@ const SignIn = () => {
           <div className="card card-secondary">
             <div>
               <div className="pie-chart-icon">
-                <img src="src\assets\ellipse_1.svg" alt="elliplse" />
-                <img src="src\assets\pie-chart.svg" alt="pie-chart" />
+                <img src="/assets/ellipse_1.svg" alt="elliplse" />
+                <img src="/assets/pie-chart.svg" alt="pie-chart" />
               </div>
               <div>
                 <span className="increase">

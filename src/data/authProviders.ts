@@ -4,25 +4,25 @@ const authProviders: AuthProvider[] = [
   {
     authName: "github",
     text: "Sign in with Github",
-    imgSrc: "src/assets/githubIcon.svg",
+    imgSrc: "/assets/githubIcon.svg",
     altText: "GitHub",
   },
   {
     authName: "bitbucket",
     text: "Sign in with Bitbucket",
-    imgSrc: "src/assets/bitbucketIcon.svg",
+    imgSrc: "/assets/bitbucketIcon.svg",
     altText: "Bitbucket",
   },
   {
     authName: "azure",
     text: "Sign in with Azure Devops",
-    imgSrc: "src/assets/azureIcon.svg",
+    imgSrc: "/assets/azureIcon.svg",
     altText: "Azure DevOps",
   },
   {
     authName: "gitlab",
     text: "Sign in with GitLab",
-    imgSrc: "src/assets/gitlabIcon.svg",
+    imgSrc: "/assets/gitlabIcon.svg",
     altText: "GitLab",
   },
 ];
