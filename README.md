@@ -1,5 +1,5 @@
 ### Live Demo
-🚀 [Click here for the CodeAntAi homepage](https://codeantai-delta.vercel.app/))
+🚀 [Click here](https://codeantai-delta.vercel.app/))
 
 ## Screenshots-
 Desktop version-
