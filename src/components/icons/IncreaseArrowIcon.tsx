@@ -13,17 +13,17 @@ const IncreaseArrowIcon = () => {
             id="Path"
             d="M8.83325 10.657L12.8333 6.65698L16.8333 10.657"
             stroke="#0049C6"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             id="Path 2"
             d="M12.8333 6.65698L12.8333 16.9861"
             stroke="#0049C6"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
       </g>

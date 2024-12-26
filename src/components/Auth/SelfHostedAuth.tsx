@@ -1,22 +1,19 @@
+import selfHostedAuthProviders from "../../data/selfhostedAuthProviders";
 import Button from "../UI/Button";
 
 const SelfHostedAuth = () => {
   return (
     <div className="auth-buttons">
-      <Button
-        className="auth-button github"
-        onClick={() => {}}
-        name="Self Hosted GitLab"
-        imgSrc="src/assets/gitlabIcon.svg"
-        altText="GitHub"
-      />
-      <Button
-        className="auth-button bitbucket"
-        onClick={() => {}}
-        name="Sign in with SSO"
-        imgSrc="src/assets/keyIcon.svg"
-        altText="Bitbucket"
-      />
+      {selfHostedAuthProviders.map((provider) => (
+        <Button
+          key={provider.authName}
+          className={`auth-button ${provider.authName}`}
+          onClick={() => {}}
+          name={provider.text}
+          imgSrc={provider.imgSrc}
+          altText={provider.altText}
+        />
+      ))}
     </div>
   );
 };

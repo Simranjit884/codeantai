@@ -364,3 +364,57 @@
   line-height: inherit;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .signin-left {
+    display: none; /* Hide the left section */
+  }
+
+  .signin-right {
+    width: 100%; /* Make the right section full width */
+    padding: 24px 16px;
+    gap: 32px;
+  }
+
+  .signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fafafa;
+  }
+
+  .auth-heading {
+    padding: 36px 16px;
+  }
+
+  .logo-heading {
+    width: auto;
+    gap: 24px;
+  }
+
+  .toggle-button {
+    padding: 12px 12px;
+    flex: auto;
+    width: auto;
+    height: auto;
+  }
+
+  .toggle-button.active {
+    padding: 12px 14px;
+  }
+
+  .auth-type-toggle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .auth-button {
+    width: 100%;
+  }
+
+  .auth-buttons {
+    padding: 24px 16px !important;
+  }
+}
